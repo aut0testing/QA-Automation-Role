@@ -39,15 +39,15 @@ QA Automation Project - The Internet
 
 6. Запуск тестов:
 
-6.1 Локально:
+5.1 Локально:
    
    а) по url по умолчанию: pytest -v
 
-   б) для кастомного url: pytest --base-url=https://google.com -v
+   б) для кастомного - укажите url в параметре(--base-url), например: pytest --base-url=https://google.com -v
 
-6.2 В Github CI - прогон тестов запускается автоматически при каждом push запроса в ветке в main
+5.2 В Github CI - прогон тестов запускается автоматически при каждом push запроса в ветке в main
 
-6.3 Github CI вручную:
+5.3 Github CI вручную:
 
   - Зайти в Actions
   - Выбрать Playwright Pytest Manual Run
