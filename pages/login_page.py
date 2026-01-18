@@ -1,7 +1,7 @@
 class LoginPage:
     PATH = "/login"
 
-    USERNAME_INPUT = "#username"
+    #USERNAME_INPUT = "#username"
     PASSWORD_INPUT = "#password"
     LOGIN_BUTTON = "button[type='submit']"
     FLASH_MESSAGE = "#flash"
