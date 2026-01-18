@@ -19,7 +19,9 @@ QA Automation Project - The Internet
    
    git clone git@github.com:aut0testing/QA-Automation-Role.git
 
-2. Создаем виртуальное окружение:
+   cd QA-Automation-Role
+
+3. Создаем виртуальное окружение:
    
    python -m venv venv
 
@@ -27,15 +29,15 @@ QA Automation Project - The Internet
 
    venv\Scripts\activate          # Windows
 
-3. Устанавливаем зависимости:
+4. Устанавливаем зависимости:
    
    pip install -r requirements.txt
 
-4. Устанавливаем браузеры Playwright:
+5. Устанавливаем браузеры Playwright:
    
    playwright install
 
-5. Запуск тестов:
+6. Запуск тестов:
 
 6.1 Локально:
    
