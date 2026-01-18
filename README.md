@@ -1,4 +1,4 @@
-# QA Automation Project - The Internet
+QA Automation Project - The Internet
 
 Автоматизация тестирования для веб-приложения [The Internet](https://the-internet.herokuapp.com) с использованием Python, Playwright и Pytest.  
 Проект построен по паттерну Page Object и поддерживает CI через GitHub Actions.
@@ -16,32 +16,34 @@
 # Установка и запуск тестов 
 
 1. Клонируем репозиторий:
-git clone git@github.com:aut0testing/QA-Automation-Role.git
+   
+   git clone git@github.com:aut0testing/QA-Automation-Role.git
 
 2. Создаем виртуальное окружение:
-python -m venv venv
+   
+   python -m venv venv
 
-source venv/bin/activate       # Linux / Mac
+   source venv/bin/activate       # Linux / Mac
 
-venv\Scripts\activate          # Windows
+   venv\Scripts\activate          # Windows
 
-4. Устанавливаем зависимости:
-pip install -r requirements.txt
+3. Устанавливаем зависимости:
+   pip install -r requirements.txt
 
-5. Устанавливаем браузеры Playwright:
-playwright install
+4. Устанавливаем браузеры Playwright:
+   playwright install
 
-6. Запуск тестов:
+5. Запуск тестов:
 
-5.1 Локально:
+6.1 Локально:
    
 а) по url по умолчанию: pytest -v
 
 б) для кастомного url: pytest --base-url=https://google.com -v
 
-5.2 В Github CI - прогон тестов запускается автоматически при каждом push запроса в ветке в main
+6.2 В Github CI - прогон тестов запускается автоматически при каждом push запроса в ветке в main
 
-5.3 Github CI вручную:
+6.3 Github CI вручную:
 
   - Зайти в Actions
   - Выбрать Playwright Pytest Manual Run
