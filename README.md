@@ -28,18 +28,20 @@ QA Automation Project - The Internet
    venv\Scripts\activate          # Windows
 
 3. Устанавливаем зависимости:
+   
    pip install -r requirements.txt
 
 4. Устанавливаем браузеры Playwright:
+   
    playwright install
 
 5. Запуск тестов:
 
 6.1 Локально:
    
-а) по url по умолчанию: pytest -v
+   а) по url по умолчанию: pytest -v
 
-б) для кастомного url: pytest --base-url=https://google.com -v
+   б) для кастомного url: pytest --base-url=https://google.com -v
 
 6.2 В Github CI - прогон тестов запускается автоматически при каждом push запроса в ветке в main
 
