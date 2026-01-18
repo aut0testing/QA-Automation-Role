@@ -3,7 +3,6 @@ import os
 import pytest
 from playwright.sync_api import sync_playwright
 
-# Добавляем корень проекта в sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 def pytest_addoption(parser):
