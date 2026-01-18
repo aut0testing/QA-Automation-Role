@@ -33,8 +33,12 @@ playwright install
 5.1 Локально:
 а) по url по умолчанию: pytest -v
 б) для кастомного url: pytest --base-url=https://google.com -v
-5.2 В Github CI:
-
+5.2 В Github CI - прогон тестов запускается автоматически при каждом push запроса в ветке в main
+5.3 Github CI вручную:
+  - Зайти в Actions
+  - Выбрать Playwright Pytest Manual Run
+  - Выбрать Run workflow
+  - Нажать на зеленую кнопку Run workflow
 
 
 
