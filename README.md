@@ -6,9 +6,9 @@ QA Automation Project - The Internet
 
 # Стек технологий
 
-- Python 3.11
-- Pytest
-- Playwright
+- Python 3.13
+- Pytest >= 8.3.0
+- Playwright >= 1.48.0
 - GitHub Actions CI
 - Page Object Model
 
@@ -31,7 +31,16 @@ QA Automation Project - The Internet
 
 4. Устанавливаем зависимости:
    
-   pip install -r requirements.txt
+   Для Python 3.13 используйте один из способов:
+   
+   а) Используйте скрипт установки (рекомендуется):
+      bash install.sh
+   
+   б) Или установите вручную с предпочтением wheel файлов:
+      pip install --prefer-binary -r requirements.txt
+   
+   в) Если возникли проблемы с компиляцией, попробуйте:
+      pip install --prefer-binary --no-build-isolation -r requirements.txt
 
 5. Устанавливаем браузеры Playwright:
    
