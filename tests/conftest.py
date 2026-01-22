@@ -20,9 +20,10 @@ def base_url(request):
 @pytest.fixture
 def page(base_url):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True, slow_mo=500)
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
+        context.base_url = base_url
         page = context.new_page()
-        page.base_url = base_url  # сохраняем base_url
-        yield page
+        yield page, context
+        context.close()
         browser.close()
