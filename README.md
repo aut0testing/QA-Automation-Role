@@ -1,58 +1,97 @@
-QA Automation Project - The Internet
+# QA Automation Project - The Internet
 
 Автоматизация тестирования для веб-приложения [The Internet](https://the-internet.herokuapp.com) с использованием Python, Playwright и Pytest.  
 Проект построен по паттерну Page Object и поддерживает CI через GitHub Actions.
 
+## Стек технологий
 
-# Стек технологий
-
-- Python 3.11
+- Python 3.13
 - Pytest
 - Playwright
 - GitHub Actions CI
 - Page Object Model
 
+## Структура проекта
 
-# Установка и запуск тестов 
+```
+QA-Automation-Role/
+├── pages/              # Page Object классы
+│   ├── login_page.py
+│   ├── main_page.py
+│   └── secure_page.py
+├── tests/              # Тестовые файлы
+│   ├── conftest.py     # Pytest конфигурация и фикстуры
+│   ├── test_login_page.py
+│   ├── test_login_positive.py
+│   └── test_main_page.py
+├── requirements.txt    # Зависимости проекта
+└── README.md
+```
 
-1. Клонируем репозиторий:
-   
-   git clone git@github.com:aut0testing/QA-Automation-Role.git
+## Установка и запуск тестов
 
-   cd QA-Automation-Role
+### 1. Клонируем репозиторий
 
-3. Создаем виртуальное окружение:
-   
-   python -m venv venv
+```bash
+git clone git@github.com:aut0testing/QA-Automation-Role.git
+cd QA-Automation-Role
+```
 
-   source venv/bin/activate       # Linux / Mac
+### 2. Создаем виртуальное окружение
 
-   venv\Scripts\activate          # Windows
+```bash
+python3.13 -m venv venv
+```
 
-4. Устанавливаем зависимости:
-   
-   pip install -r requirements.txt
+Активируем виртуальное окружение:
 
-5. Устанавливаем браузеры Playwright:
-   
-   playwright install
+- **Linux / Mac:**
+  ```bash
+  source venv/bin/activate
+  ```
 
-6. Запуск тестов:
+- **Windows:**
+  ```bash
+  venv\Scripts\activate
+  ```
 
-5.1 Локально:
-   
-   а) по url по умолчанию: pytest -v
+### 3. Устанавливаем зависимости
 
-   б) для кастомного - укажите url в параметре(--base-url), например: pytest --base-url=https://google.com -v
+```bash
+pip install -r requirements.txt
+```
 
-5.2 В Github CI - прогон тестов запускается автоматически при каждом push запроса в ветке в main
+### 4. Устанавливаем браузеры Playwright
 
-5.3 Github CI вручную:
+```bash
+playwright install
+```
 
-  - Зайти в Actions
-  - Выбрать Playwright Pytest Manual Run
-  - Выбрать Run workflow
-  - Нажать на зеленую кнопку Run workflow
+### 5. Запуск тестов
+
+#### 5.1 Локально
+
+**С URL по умолчанию:**
+```bash
+pytest -v
+```
+
+**С кастомным URL:**
+```bash
+pytest --base-url=https://google.com -v
+```
+
+#### 5.2 GitHub CI (автоматический)
+
+Прогон тестов запускается автоматически при каждом push в ветку `main`.
+
+#### 5.3 GitHub CI (ручной запуск)
+
+1. Залогиниться в GitHub (логин и пароль отправены на почту)  
+2. Зайти в **Actions**
+3. Выбрать **Playwright Pytest Manual Run**
+4. Выбрать **Run workflow**
+5. Нажать на зеленую кнопку **Run workflow**
 
 
 
